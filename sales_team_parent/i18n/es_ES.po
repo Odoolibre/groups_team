@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sales_team_parent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20190222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-24 23:51-0400\n"
+"PO-Revision-Date: 2019-02-25 00:28-0400\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_date_to
+msgid "Ending date"
+msgstr "Fecha de finalización"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_id
+msgid "ID"
+msgstr ""
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_name
+#: model:ir.ui.view,arch_db:sales_team_parent.sales_target_form_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_team_parent_team
+msgid "Parent Team"
+msgstr "Equipo Padre"
+
+#. module: sales_team_parent
+#: code:addons/sales_team_parent/models/crm_target.py:52
+#: code:addons/sales_team_parent/models/crm_target.py:61
+#: code:addons/sales_team_parent/models/crm_target.py:70
+#, python-format
+msgid "Please check the date"
+msgstr "Por favor verifique la fecha"
+
+#. module: sales_team_parent
+#: model:ir.model,name:sales_team_parent.model_crm_team
+msgid "Sales Channel"
+msgstr "Canal de Ventas"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_user_id
+msgid "Sales Person"
+msgstr "Vendedor"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_sales_team
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: sales_team_parent
+#: model:ir.ui.menu,name:sales_team_parent.menu_crm_target
+msgid "Salesman Target"
+msgstr "Objetivo del vendedor"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_date_from
+msgid "Starting date"
+msgstr "Fecha de inicio"
+
+#. module: sales_team_parent
+#: model:ir.actions.act_window,name:sales_team_parent.action_crm_sales_target_act
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_target_target_amount
+#: model:ir.ui.menu,name:sales_team_parent.main_menu_target
+msgid "Target"
+msgstr "Objetivo"
+
+#. module: sales_team_parent
+#: model:ir.actions.server,name:sales_team_parent.action_crm_sales_target
+#: model:ir.ui.view,arch_db:sales_team_parent.sales_target_form_view
+msgid "Targets"
+msgstr "Objetivos"
+
+#. module: sales_team_parent
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_team_team_target
+msgid "Team Target"
+msgstr "Objetivo de equipo"
+
+#. module: sales_team_parent
+#: code:addons/sales_team_parent/models/crm_target.py:51
+#: code:addons/sales_team_parent/models/crm_target.py:60
+#: code:addons/sales_team_parent/models/crm_target.py:69
+#, python-format
+msgid "Warning!"
+msgstr "Advertencia"
+
+#. module: sales_team_parent
+#: model:ir.model,name:sales_team_parent.model_crm_target
+msgid "crm.target"
+msgstr ""
