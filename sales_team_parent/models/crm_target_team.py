@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+import logging
+_logger = logging.getLogger(__name__)
+
+
 
 
 class CrmTeam(models.Model):
@@ -13,24 +17,16 @@ class CrmTeam(models.Model):
     parent_team = fields.Many2one('crm.team', string='Parent Team', copy=False)
     currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, default=lambda self: self.get_currency())
 
-    @api.one
+    @api.multi
     def compute_team_target(self):
+        """ Totalize each amount assigned to each vendor belonging to a team """
         total = 0
-        childs = self.get_childs(self.id)
-        childs += self
-        for team in childs:
-            for member_id in team.member_ids:
-                target = team.env['crm.target'].search([('user_id', '=', member_id.id)])
-                if target:
-                    for t in target:
-                        total += t.target_amount
+        childs_team = self.env['crm.target'].search([('sales_team', '=', self.id)])
+        _logger.info("""\n\n\n childs_team : %s \n\n\n"""%(childs_team))
+        if childs_team:
+            for amount in childs_team:
+                total += amount.target_amount
+            _logger.info("""\n\n\n total : %s \n\n\n"""%(total))
+            self.team_target = total
 
-            team.team_target = total
-        return
 
-    def get_childs(self, team_id):
-        child_teams = self.search([('parent_team.id', '=', team_id)])
-        if child_teams:
-            for team in child_teams:
-                child_teams += self.get_childs(team.id)
-        return child_teams
