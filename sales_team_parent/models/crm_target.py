@@ -13,12 +13,12 @@ class CrmTeam(models.Model):
         return self.env.user.company_id.currency_id.id
 
     name = fields.Char(string='Name', required=True)
-    user_id = fields.Many2one('res.users', 'Sales Person', required=True)
+    user_id = fields.Many2one('res.users', string='Sales Person', required=True)
     sales_team = fields.Many2one('crm.team', string='Sales Team')
-    target_amount = fields.Float('Target')
-    date_from = fields.Date("Starting date", required=True)
-    date_to = fields.Date("Ending date", required=True)
-    duration = fields.Integer(default=1)
+    target_amount = fields.Float(string='Target')
+    date_from = fields.Date(string='Starting date', required=True)
+    date_to = fields.Date(string='Ending date', required=True)
+    duration = fields.Integer(string='Duration',default=1)
     currency_id = fields.Many2one('res.currency', store=True, string='Currency', readonly=True, default=lambda self: self.get_currency())
 
     @api.onchange('user_id')

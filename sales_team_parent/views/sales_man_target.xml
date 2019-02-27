@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
         <record model="ir.ui.view" id="sales_target_form_view">
             <field name="name">crm.target.form</field>
             <field name="model">crm.target</field>
@@ -72,5 +71,4 @@
 
         <menuitem name="Target" id="main_menu_target" parent="sale.sale_menu_root" sequence="101" />
         <menuitem name="Salesman Target" id="menu_crm_target" parent="main_menu_target" action="action_crm_sales_target"/>
-    </data>
 </odoo>

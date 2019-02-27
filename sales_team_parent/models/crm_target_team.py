@@ -22,11 +22,9 @@ class CrmTeam(models.Model):
         """ Totalize each amount assigned to each vendor belonging to a team """
         total = 0
         childs_team = self.env['crm.target'].search([('sales_team', '=', self.id)])
-        _logger.info("""\n\n\n childs_team : %s \n\n\n"""%(childs_team))
         if childs_team:
             for amount in childs_team:
                 total += amount.target_amount
-            _logger.info("""\n\n\n total : %s \n\n\n"""%(total))
             self.team_target = total
 
 
