@@ -14,10 +14,10 @@ class CrmTeam(models.Model):
         return self.env.user.company_id.currency_id.id
 
     team_target = fields.Float(string='Team Target', compute="compute_team_target")
-    parent_team = fields.Many2one('crm.team', string='Parent Team', copy=False)
+    parent_team_id = fields.Many2one('crm.team', string='Parent Team', copy=False)
     currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, default=lambda self: self.get_currency())
 
-    @api.multi
+    @api.depends('team_target')
     def compute_team_target(self):
         """ Totalize each amount assigned to each vendor belonging to a team """
         total = 0

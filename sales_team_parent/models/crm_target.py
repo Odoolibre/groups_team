@@ -21,6 +21,7 @@ class CrmTeam(models.Model):
     duration = fields.Integer(string='Duration',default=1)
     currency_id = fields.Many2one('res.currency', store=True, string='Currency', readonly=True, default=lambda self: self.get_currency())
 
+
     @api.onchange('user_id')
     def onchange_salesman(self):
         team_ids = self.env['crm.team'].search([])
