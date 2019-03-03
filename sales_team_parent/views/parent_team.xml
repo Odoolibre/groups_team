@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <xpath expr="//group[1]/group[2]" position="inside">
                     <field name="parent_team_id" domain="[('id','!=', id)]"/>
-                    <field name="id"/>
                 </xpath>
             </field>
         </record>
